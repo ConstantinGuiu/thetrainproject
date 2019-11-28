@@ -4,8 +4,7 @@ class ShowTimetable {
         this.getData()
         this.noOfDepartNaer
         this.noOfDepartJaeg
-        this.noOfStations
-        this.table = document.querySelector("#time-table")
+        this.table = document.querySelector("#table-body")
     }
 
 
@@ -20,27 +19,51 @@ class ShowTimetable {
 
     setUpTimeTable() {
 
-        this.noOfStations = this.completeData.Stations.length;
-        let times = this.completeData.Timetable.Naerum;
+        let data = this.completeData;
+        let stationsNJ = data.Stations;
+        let timesFromNaerum = data.Timetable.Naerum;
+        let allTimes = [];
 
-        times.forEach(time =>{
-            
+        timesFromNaerum.forEach(time => {
+
             let localtime = time;
-            this.completeData.Stations.forEach(el => {
+            data.Stations.forEach(el => {
 
                 localtime = localtime + el.MinutesFromNaerum;
-                console.log(el.StationName)
-                console.log("Arrive at: ", localtime)
+                allTimes.push(localtime);
                 localtime++
-                console.log("Depart at: ", localtime)
-                console.log("***********************")
-                
-            })
 
-            console.log("########## Another train! ##########")
+            })
 
         })
 
+        console.log(allTimes)
+
+        let columnCount = 0;
+        stationsNJ.forEach(el => {
+            let dataInRow = [];
+            dataInRow.push(el.StationName);
+
+            let columnLocalCount = columnCount
+            while (columnLocalCount < allTimes.length) {
+                dataInRow.push(allTimes[columnLocalCount]);
+                columnLocalCount += 8;
+            }
+            columnCount++;
+
+            this.addRow(this.table, dataInRow, el.StationId)
+        })
+
+
+    }
+
+    addRow(table, rowData, ID) {
+        let toInsert = '<tr> \n'
+        rowData.forEach(el => {
+            toInsert = toInsert + `<td>${el}</td>`;
+        })
+        toInsert = toInsert + '</td>'
+        table.innerHTML = table.innerHTML + toInsert;
     }
 }
 
