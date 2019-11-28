@@ -1,0 +1,38 @@
+#navbar-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90vw;
+}
+
+.nav-btn{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(23, 23, 114);
+    border: 0;
+    color: rgb(173, 208, 255);
+    margin: 0px 1px;
+    
+}
+
+.nav-btn:hover{
+    background-color: rgb(48, 48, 131);
+}
+
+.nav-btn:focus{
+    outline: none;
+}
+
+.nav-btn:active{
+    background-color: rgb(170, 208, 255);
+    color: rgb(16, 16, 94);
+}
+
+.nav-btn-selected{
+    background-color:rgb(95, 170, 255);
+    color: rgb(16, 16, 94);
+}
+.nav-btn-selected:hover{
+    background-color: rgb(175, 211, 255);
+    color: rgb(16, 16, 94);
+}

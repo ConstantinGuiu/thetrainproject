@@ -1,0 +1,32 @@
+#train-playground{
+    width: 100vw;
+    height: 19vw;
+    margin: auto;
+    position: relative;
+}
+
+#local-tog-pg{
+    width: 20%;
+    position: absolute;
+    bottom: 10%;
+    left: 21%;
+    z-index: 3;
+    animation-name: movetrain;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.33,0,.68,1);
+}
+
+@keyframes movetrain{
+    10% {left: 21%}
+    45% {left: 59%}
+    55% {left: 59%}
+    100% {left: 21%}
+
+}
+
+#local-stations-pg{
+    position: absolute;
+    bottom: 0;
+    left: 0;;
+}

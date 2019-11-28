@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(2, 6, 61);
+    margin: 0;
+}
+
+#header-div{
+    text-align: center;
+    margin-top: 1vw;
+}
+
+#main-title{
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(93, 190, 255);
+}
+
+
+

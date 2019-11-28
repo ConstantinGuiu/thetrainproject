@@ -1,0 +1,11 @@
+#content-div{
+    width: 60vw;
+    margin: auto;
+}
+
+.content-page{
+    background-color: rgb(95, 170, 255);
+    width: 100%;
+    min-height: 50px;
+}
+
