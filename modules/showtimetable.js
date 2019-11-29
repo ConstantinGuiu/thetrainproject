@@ -30,6 +30,7 @@ class ShowTimetable {
             data.Stations.forEach(el => {
 
                 localtime = localtime + el.MinutesFromNaerum;
+                localtime = this.check60(localtime);
                 allTimes.push(localtime);
                 localtime++
 
@@ -37,7 +38,7 @@ class ShowTimetable {
 
         })
 
-        console.log(allTimes)
+        //console.log(allTimes)
 
         let columnCount = 0;
         stationsNJ.forEach(el => {
@@ -64,6 +65,16 @@ class ShowTimetable {
         })
         toInsert = toInsert + '</td>'
         table.innerHTML = table.innerHTML + toInsert;
+    }
+
+    check60(num){
+        if (num >= 60){
+            while (num >= 60){
+                num -= 60
+            }
+            return num
+        }
+        else return num
     }
 }
 

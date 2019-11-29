@@ -9,6 +9,9 @@ class GenerateButtons {
         // and adding a class to the timetable button to show as it is selected
         this.livemapDiv.style.display = "none";
         this.timetableBtn.classList.add("nav-btn-selected");
+
+        // TO REMOVE:
+        this.liveMapBtn.click()
     }
 
     switchDivs(){

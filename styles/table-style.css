@@ -1,5 +1,5 @@
 th, td {
-    border: 1px solid rgb(106, 113, 173);
+    border: 1px solid rgb(62, 98, 151);
     min-width: 25px;
     text-align: center;
 }
@@ -17,4 +17,5 @@ td:nth-child(1){
 table{
     margin: auto;
     border-collapse: collapse;
+    background-color: rgb(83, 158, 255);
 }

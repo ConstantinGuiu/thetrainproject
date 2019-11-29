@@ -22,12 +22,12 @@
             "StationId": 4,
             "StationName": "Brede",
             "MinutesFromNaerum": 2,
-            "MinutesFromJaegersborg": 5
+            "MinutesFromJaegersborg": 4
         },
         {
             "StationId": 5,
             "StationName": "Fuglevad",
-            "MinutesFromNaerum": 5,
+            "MinutesFromNaerum": 4,
             "MinutesFromJaegersborg": 2
         },
         {
