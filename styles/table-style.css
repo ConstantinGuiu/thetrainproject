@@ -1,0 +1,20 @@
+th, td {
+    border: 1px solid rgb(106, 113, 173);
+    min-width: 25px;
+    text-align: center;
+}
+
+th{
+    padding: 0 20px;
+}
+
+td:nth-child(1){
+    text-align: left;
+    padding-right: 10px;
+    padding-left: 5px;;
+}
+
+table{
+    margin: auto;
+    border-collapse: collapse;
+}

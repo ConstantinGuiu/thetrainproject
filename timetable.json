@@ -10,12 +10,12 @@
             "StationId": 2,
             "StationName": "Ravnholm",
             "MinutesFromNaerum": 2,
-            "MinutesFromJaegersborg": 4
+            "MinutesFromJaegersborg": 1
         },
         {
             "StationId": 3,
             "StationName": "Orholm",
-            "MinutesFromNaerum": 4,
+            "MinutesFromNaerum": 1,
             "MinutesFromJaegersborg": 2
         },
         {
