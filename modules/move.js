@@ -1,6 +1,5 @@
 class Move {
     constructor() {
-        this.completeData
         this.getData()
     }
 
@@ -9,15 +8,10 @@ class Move {
         fetch("timetable.json")
             .then((data) => data.json())
             .then((data) => {
-                this.completeData = data
-                this.consoleDTR()
+                let stationsArr = data.Stations
+                this.createMap(stationsArr)
+                this.generateTrains(data);
             })
-    }
-
-    consoleDTR() {
-        console.log(this.completeData)
-        let stationsArr = this.completeData.Stations
-        this.createMap(stationsArr)
     }
 
     createMap(st) {
@@ -39,10 +33,7 @@ class Move {
 
     changeStationWidth(st) {
         let station = document.querySelector('#train-line')
-
-        let wdth = 40/st
-
-        console.log(wdth)
+        let wdth = 40 / (st - 1)
 
         station.querySelectorAll(".station").forEach(el => {
             let element = el.querySelector('.station-line')
@@ -52,7 +43,20 @@ class Move {
 
         let lastStation = document.querySelector('#train-line').lastChild
         lastStation.style.width = '20px'
+    }
 
+    generateTrains(data) {
+        let noOfStations = data.Stations.length; 
+        let percentageToMove = 100 / (noOfStations-1)
+
+        this.moveTrain(percentageToMove)
+    }
+
+    moveTrain(time){
+        let id = 7
+        let station = time*id
+        let train = document.querySelector('.mini-train-div')
+        train.style.marginLeft = `${station}%`
     }
 }
 

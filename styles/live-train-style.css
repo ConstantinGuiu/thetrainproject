@@ -1,6 +1,6 @@
 #mini-train-canvas{
     margin: auto;
-    width: 35vw;
+    width: 40vw;
     background-color: rgb(255, 213, 213);
 }
 
@@ -9,7 +9,6 @@
     display: flex;
     width: 4vw;
     flex-direction: column;
-    margin-left: 0%;
 }
 
 .mini-train{
