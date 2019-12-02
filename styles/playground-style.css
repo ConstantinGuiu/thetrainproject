@@ -8,7 +8,7 @@
 #local-tog-pg{
     width: 20%;
     position: absolute;
-    bottom: 10%;
+    bottom: 9%;
     left: 21%;
     z-index: 3;
     animation-name: movetrain;
