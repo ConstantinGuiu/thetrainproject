@@ -1,49 +1,41 @@
 {
     "Stations": [
         {
-            "StationId": 1,
             "StationName": "Naerum",
             "MinutesFromNaerum": 0,
             "MinutesFromJaegersborg": 2
         },
         {
-            "StationId": 2,
             "StationName": "Ravnholm",
             "MinutesFromNaerum": 2,
             "MinutesFromJaegersborg": 1
         },
         {
-            "StationId": 3,
             "StationName": "Orholm",
             "MinutesFromNaerum": 1,
             "MinutesFromJaegersborg": 2
         },
         {
-            "StationId": 4,
             "StationName": "Brede",
             "MinutesFromNaerum": 2,
             "MinutesFromJaegersborg": 4
         },
         {
-            "StationId": 5,
             "StationName": "Fuglevad",
             "MinutesFromNaerum": 4,
             "MinutesFromJaegersborg": 2
         },
         {
-            "StationId": 6,
             "StationName": "Lyngby",
             "MinutesFromNaerum": 2,
             "MinutesFromJaegersborg": 1
         },
         {
-            "StationId": 7,
             "StationName": "Norgaardsvej",
             "MinutesFromNaerum": 1,
             "MinutesFromJaegersborg": 2
         },
         {
-            "StationId": 8,
             "StationName": "Jaegersborg",
             "MinutesFromNaerum": 2,
             "MinutesFromJaegersborg": 0

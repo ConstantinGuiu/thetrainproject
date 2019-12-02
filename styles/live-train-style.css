@@ -1,0 +1,19 @@
+#mini-train-canvas{
+    margin: auto;
+    width: 35vw;
+    background-color: rgb(255, 213, 213);
+}
+
+.mini-train-div{
+    z-index: 2;
+    display: flex;
+    width: 4vw;
+    flex-direction: column;
+    margin-left: 0%;
+}
+
+.mini-train{
+    width: 4vw;
+    z-index: 2;
+    transform: translateX(-2vw);
+}

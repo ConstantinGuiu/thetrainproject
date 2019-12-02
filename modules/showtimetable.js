@@ -41,6 +41,7 @@ class ShowTimetable {
         //console.log(allTimes)
 
         let columnCount = 0;
+        let noOfStations = stationsNJ.length
         stationsNJ.forEach(el => {
             let dataInRow = [];
             dataInRow.push(el.StationName);
@@ -48,7 +49,7 @@ class ShowTimetable {
             let columnLocalCount = columnCount
             while (columnLocalCount < allTimes.length) {
                 dataInRow.push(allTimes[columnLocalCount]);
-                columnLocalCount += 8;
+                columnLocalCount += noOfStations;
             }
             columnCount++;
 
