@@ -52,10 +52,11 @@ class GetMoving {
     generateTrains(data) {
         console.log(data)
         let noOfStations = data.Stations.length;
-        let percentageToMove = 100 / (noOfStations - 1)
 
+        let trainID = 1
         data.Timetable.Naerum.forEach(el => {
-            new Train(data, el)
+            new Train(data, el, trainID)
+            trainID++
         })
 
     }

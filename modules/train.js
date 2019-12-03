@@ -1,9 +1,11 @@
 class Train {
-    constructor(data, startMinute) {
+    constructor(data, startMinute, trainID) {
         this.trainTakes = data.Stations
         this.actualMinute = moment().format('mm')
         this.startMinute = startMinute
         this.calculatedMinute = startMinute
+        this.trainID = trainID
+        this.canvas = document.querySelector('#mini-train-canvas')
         this.createTrain()
     }
 
@@ -19,20 +21,26 @@ class Train {
             i++
         }
         console.log(i, this.calculatedMinute)
-
-        if(i>1){
-            // train moving
-        }
-        else{
-            // train in first station
-        }
-
+        // let timp1 = moment(h) + ':' + this.calculatedMinute + ':' + 00;
+        // let timp2 = moment(h) + ':' + moment(mm) + ':' + 00;
+        // console.log(moment(timp1, 'hhmmss').fromNow())
+        let stationID = i
+        this.insertTrain(stationID)
     }
 
-    moveTrain(time, stationID) {
+    insertTrain(stationID) {
+        this.canvas.innerHTML = this.canvas.innerHTML + `<div class="mini-train-div" id="mini-train${this.trainID}">
+        <img class="mini-train" src="images/lokaltog_02.svg">
+    </div>`
+        this.placeTrain(stationID, this.trainID)
+    }
+
+    placeTrain(stationID, trainID) {
+        let noOfStations = this.trainTakes.length
+        let percentageToMove = 100 / (noOfStations - 1)
         let id = stationID - 1
-        let station = time * id
-        let train = document.querySelector('.mini-train-div')
+        let station = percentageToMove * id
+        let train = document.querySelector(`#mini-train${trainID}`)
         train.style.marginLeft = `${station}%`
     }
 }
@@ -40,9 +48,7 @@ class Train {
 export default Train;
 
 
+//    
 
 
 
-`<div class="mini-train-div">
-    <img class="mini-train" src="images/lokaltog_02.svg">
-</div>`
