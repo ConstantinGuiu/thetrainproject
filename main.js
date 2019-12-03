@@ -1,5 +1,5 @@
 //import Data from './modules/getdata.js'
-import Move from './modules/move.js'
+import GetMoving from './modules/move.js'
 import GenerateButtons from './modules/generatebuttons.js'
 import ShowTimetable from './modules/showtimetable.js'
 
@@ -8,6 +8,6 @@ import ShowTimetable from './modules/showtimetable.js'
 
 // console.log(well)
 
-new Move;
+new GetMoving;
 new GenerateButtons;
 new ShowTimetable;

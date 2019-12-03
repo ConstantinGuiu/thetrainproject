@@ -1,4 +1,8 @@
-class Move {
+import Train from "./train.js";
+
+//import Train from './modules/train.js'
+
+class GetMoving {
     constructor() {
         this.getData()
     }
@@ -46,18 +50,17 @@ class Move {
     }
 
     generateTrains(data) {
-        let noOfStations = data.Stations.length; 
-        let percentageToMove = 100 / (noOfStations-1)
+        console.log(data)
+        let noOfStations = data.Stations.length;
+        let percentageToMove = 100 / (noOfStations - 1)
 
-        this.moveTrain(percentageToMove)
+        data.Timetable.Naerum.forEach(el => {
+            new Train(data, el)
+        })
+
     }
 
-    moveTrain(time){
-        let id = 7
-        let station = time*id
-        let train = document.querySelector('.mini-train-div')
-        train.style.marginLeft = `${station}%`
-    }
+
 }
 
-export default Move;
+export default GetMoving;

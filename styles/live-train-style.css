@@ -1,7 +1,7 @@
-#mini-train-canvas{
+.mini-train-canvas{
     margin: auto;
     width: 40vw;
-    background-color: rgb(255, 213, 213);
+    background-color: rgb(233, 233, 233);
 }
 
 .mini-train-div{
