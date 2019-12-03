@@ -4,6 +4,7 @@ class Train {
         this.actualMinute = moment().format('mm')
         this.startMinute = startMinute
         this.calculatedMinute = startMinute
+        this.calculatedTime = startMinute
         this.trainID = trainID
         this.canvas = document.querySelector('#mini-train-canvas')
         this.createTrain()
@@ -16,14 +17,20 @@ class Train {
             times.push(el.MinutesFromNaerum)
         })
 
+        let stationTime = []
+
+        for (i = 0; i < times.length; i++) {
+            this.calculatedTime = this.calculatedTime + times[i]
+            stationTime.push(this.calculatedTime)
+        }
+
+        console.log(stationTime)
+
         while (i < times.length && this.calculatedMinute < this.actualMinute) {
             this.calculatedMinute += (times[i] + 1)
             i++
         }
         console.log(i, this.calculatedMinute)
-        // let timp1 = moment(h) + ':' + this.calculatedMinute + ':' + 00;
-        // let timp2 = moment(h) + ':' + moment(mm) + ':' + 00;
-        // console.log(moment(timp1, 'hhmmss').fromNow())
         let stationID = i
         this.insertTrain(stationID)
     }
@@ -39,9 +46,9 @@ class Train {
         let noOfStations = this.trainTakes.length
         let percentageToMove = 100 / (noOfStations - 1)
         let id = stationID - 1
-        let station = percentageToMove * id
+        let distance = percentageToMove * id
         let train = document.querySelector(`#mini-train${trainID}`)
-        train.style.marginLeft = `${station}%`
+        train.style.marginLeft = `${distance}%`
     }
 }
 
@@ -49,6 +56,3 @@ export default Train;
 
 
 //    
-
-
-

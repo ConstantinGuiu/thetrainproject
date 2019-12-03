@@ -8,6 +8,11 @@ import ShowTimetable from './modules/showtimetable.js'
 
 // console.log(well)
 
-new GetMoving;
+getStarted()
+setInterval(getStarted, 5000)
+
+function getStarted() {
+    new GetMoving;
+}
 new GenerateButtons;
 new ShowTimetable;

@@ -13,16 +13,16 @@
         {
             "StationName": "Orholm",
             "MinutesFromNaerum": 1,
-            "MinutesFromJaegersborg": 10
+            "MinutesFromJaegersborg": 3
         },
         {
             "StationName": "Brede",
-            "MinutesFromNaerum": 10,
-            "MinutesFromJaegersborg": 12
+            "MinutesFromNaerum": 3,
+            "MinutesFromJaegersborg": 2
         },
         {
             "StationName": "Fuglevad",
-            "MinutesFromNaerum": 12,
+            "MinutesFromNaerum": 2,
             "MinutesFromJaegersborg": 2
         },
         {
@@ -43,7 +43,7 @@
     ],
     "Timetable":
         {
-            "Naerum": [2, 10, 17, 28, 40, 53],
+            "Naerum": [2, 17, 32, 47, 50, 56],
             "Jaegersborg": [9, 24, 39, 53]
         }
     

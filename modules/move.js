@@ -4,7 +4,7 @@ import Train from "./train.js";
 
 class GetMoving {
     constructor() {
-        this.getData()
+        this.getData();
     }
 
 
@@ -50,9 +50,9 @@ class GetMoving {
     }
 
     generateTrains(data) {
-        console.log(data)
-        let noOfStations = data.Stations.length;
-
+        //console.log(data)
+        this.canvas = document.querySelector('#mini-train-canvas')
+        this.canvas.innerHTML = ''
         let trainID = 1
         data.Timetable.Naerum.forEach(el => {
             new Train(data, el, trainID)
