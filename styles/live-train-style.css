@@ -5,6 +5,13 @@
     height: 10px;
 }
 
+#mini-train2-canvas{
+    margin: auto;
+    width: 40vw;
+    background-color: rgb(233, 233, 233);
+    height: 10px;
+}
+
 .mini-train-div{
     z-index: 2;
     display: flex;

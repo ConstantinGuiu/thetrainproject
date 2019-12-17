@@ -9,11 +9,14 @@ class GenerateButtons {
         this.switchDivs();
         // setting the display of to hide the live map div and only show the timetable one
         // and adding a class to the timetable button to show as it is selected
-        this.livemapDiv.style.display = "none";
+        //this.livemapDiv.style.display = "none";
         this.timetableBtn.classList.add("nav-btn-selected");
 
-        // TO REMOVE:
-        this.liveMapBtn.click()
+        // Setting the default view of the page:
+        
+        //this.timetableBtn.click() //      Timetable default
+        //this.liveMapBtn.click() //        First Live Map default
+        this.liveMap2Btn.click() //       Second Live Map default
     }
 
     switchDivs(){

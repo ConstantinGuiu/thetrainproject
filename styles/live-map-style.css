@@ -6,11 +6,18 @@
     width: 50vw;
 }
 
+#live-map2-canvas{
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw;
+    margin: auto;
+    background-color: white;
+    width: 50vw;
+}
+
 #train-line{
     display: flex;
     justify-content: center;
 }
-
 
 .draw-st{
     display: flex;
@@ -25,6 +32,7 @@
     z-index: 1;
 }
 
+
 .station-line{
     position: absolute;
     width: 5vw;
@@ -34,7 +42,48 @@
 }
 
 .station-name{
-    width: 100px;
+    width: 14.28%;
     display: block;
     transform: translate(5px, 15px) rotate(45deg);
+}
+
+
+/* ###################### */
+
+#train-line2{
+    padding: 0 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.station2{
+    
+    width: 10%;
+}
+
+.station-name2{
+    width: 10%;
+    display: block;
+    transform: translate(5px, 15px) rotate(45deg);
+}
+
+.station2:nth-last-child(1){
+    width: 20px;
+}
+
+.station-point2{
+    display: block;
+    background-color: black;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.station-line2{
+    position: absolute;
+    width: 4vw;
+    height: 8px;
+    background-color: red;
+    transform: translate(4px, 4px);
 }
