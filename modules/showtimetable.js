@@ -64,9 +64,11 @@ class ShowTimetable {
         rowData.forEach(el => {
             toInsert = toInsert + `<td>${el}</td>`;
         })
-        toInsert = toInsert + '</td>'
+        toInsert = toInsert + '</tr>'
         table.innerHTML = table.innerHTML + toInsert;
     }
+
+
 
     check60(num){
         if (num >= 60){

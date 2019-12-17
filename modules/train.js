@@ -6,16 +6,22 @@ class Train {
         this.calculatedMinute = startMinute
         this.trainID = trainID
         this.canvas = document.querySelector('#mini-train-canvas')
-        this.createTrain()
+        this.calculateTrains()
     }
 
-    createTrain() {
+    calculateTrains() {
         let times = []
-        let i = 1
         this.trainTakes.forEach(el => {
             times.push(el.MinutesFromNaerum)
         })
 
+        this.createTrain(times)
+
+    }
+
+    createTrain(times) {
+
+        let i = 1;
         while (i < times.length && this.calculatedMinute < this.actualMinute) {
             this.calculatedMinute += (times[i] + 1)
             i++
